@@ -1,0 +1,75 @@
+= Examen de Programmation n-Tiers
+
+Session 1 - 2019-2020
+
+Vous devez cloner ce repository git au début de l'épreuve :
+
+- dans votre navigateur ouvert sur le repo git de l'examen (celui-ci),
+cliquez sur l'icône "Cloner" en haut à gauche ; copiez l'URL qui s'affiche.
+
+- avec IntelliJ dans le menu "File -> New -> Project from version control..."
+collez l'URL précédente dans le champs URL, choisissez un répertoire de destination,
+puis cliquez sur "cloner".
+
+Vous devez rendre le résultat de votre travail sur ce même repository
+avant la fin de l'épreuve (`git commit` + `git push`).
+
+
+== Le sujet
+
+Vous devez écrire une application JFX
+pour enregistrer et vérifier des attestations de sortie
+pour le confinement.
+
+Votre application JFX devra permettre au _minimum_ de :
+
+* A partir de la fenêtre principale :
+
+- de se connecter avec un compte déjà existant (username/password)
+- ou de créer un nouveau compte personnel en fournissant un username (unique), password, date et lieu de naissance
+
+* Quand un utilisateur enregistré est connecté
+
+- d'enregistrer une demande d'attestation
+en fournissant la date/heure du début du déplacement et le motif (String) ;
+si cette demande est valide, un code (chaîne de caractère) unique est affiché.
+- d'afficher la liste des attestations qu'il a enregistrées.
+
+* Quand la police est connectée (uniquement pour le login avec le compte username "police" et password "police" déjà existant),
+
+- lors d'un contrôle de l'attestation par la police,
+la saisie du code (4 caractères) présenté par la personne contrôlée
+puis affichage de l'attestation et de l'identité de la personne.
+
+Vous devrez vous assurer de la validité des données saisies avant d'appeler les services
+(username/password de taille 2 minimum, date/heure...)
+
+== Le modèle
+
+Le code du modèle est fourni dans le code initial du projet.
+
+Un exemple d'utilisation du service de ce modèle :
+[source,java]
+----
+Service service = new Service();
+
+// enregistrement d'un nouvel utilisateur
+service.register("fred","fred", LocalDate.now(),"Orleans");
+// connexion de cet utilisateur
+Utilisateur connecte = service.login("fred","fred");
+// génération d'une attestation et récupération du code de l'attestation
+String code = service.genereAttestation(connecte.getUsername(), LocalDateTime.now(),"examen pnt");
+System.out.println("code = " + code);
+// affichage de la liste des attestations de l'utilisateur
+service.listeAttestationsUtilisateur(connecte.getUsername()).forEach(
+    System.out::println
+);
+
+// connexion de la police
+Utilisateur police = service.login("police","police");
+// vérification de l'attestation à partir du code présenté
+Attestation attestation = service.verifieCode(police.getUsername(),code);
+System.out.println("verifie le code " + code + " : " + attestation);
+----
+
+
