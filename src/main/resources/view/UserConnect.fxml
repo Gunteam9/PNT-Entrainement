@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="view.UserConnectController">
+<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.UserConnectController">
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="290.0" BorderPane.alignment="TOP_CENTER">
          <children>
@@ -44,6 +43,11 @@
       </TableView>
    </right>
    <bottom>
-      <Label fx:id="affichageErreur" prefHeight="31.0" prefWidth="28.0" BorderPane.alignment="CENTER" />
+      <VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="affichageErreur" prefHeight="31.0" prefWidth="28.0" />
+            <Button alignment="BASELINE_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#retour" text="Retour" />
+         </children>
+      </VBox>
    </bottom>
 </BorderPane>

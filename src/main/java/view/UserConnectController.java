@@ -46,6 +46,13 @@ public class UserConnectController {
 		}
 	}
 	
+	// Event Listener on Button.onAction
+	@FXML
+	public void retour(ActionEvent event) {
+		MainController.getInstance().reset();
+		ViewController.getInstance().initializeScene("Accueil");
+	}
+	
 	//INJECT
 	@SuppressWarnings("unchecked")
 	public void initialize() {

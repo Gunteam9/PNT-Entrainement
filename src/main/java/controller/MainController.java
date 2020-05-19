@@ -6,6 +6,7 @@ import java.util.List;
 
 import application.modele.Attestation;
 import application.modele.Service;
+import application.modele.Service.AttestationNonTrouveException;
 import application.modele.Service.MauvaisPasswordException;
 import application.modele.Service.MauvaiseAttestationException;
 import application.modele.Service.UsernameDejaExistantException;
@@ -23,6 +24,12 @@ public class MainController {
 	private static final MainController instance = new MainController();
 
 	private MainController() {
+        try {
+        	service.register("fred","fred", LocalDate.now(),"Orleans");
+			service.login("police","police");
+		} catch (UtilisateurNonTrouveException | MauvaisPasswordException | UsernameDejaExistantException e) {
+			e.printStackTrace();
+		}
 		ViewController.getInstance().start();
 	}
 
@@ -50,10 +57,19 @@ public class MainController {
 		return service.listeAttestationsUtilisateur(user.getUsername());
 	}
 	
+	public Attestation verifieCode(String username, String cle) throws AttestationNonTrouveException {
+		return service.verifieCode(username, cle);
+	}
+	
+	public void reset() {
+		user = null;
+	}
 	
 	
 	public static final MainController getInstance() {
 		return instance;
 	}
+
+
 
 }
