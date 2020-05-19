@@ -9,6 +9,8 @@ import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
 
+import controller.MainController;
+
 /**
  * JavaFX App
  */
@@ -16,11 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        StackPane root = new StackPane();
-        root.getChildren().add(new Label("Vers l'infini et au-delà !"));
-        Scene scene = new Scene(root, 640, 480);
-        stage.setScene(scene);
-        stage.show();
+    	MainController.getInstance();
     }
 
     public static void main(String[] args) {
