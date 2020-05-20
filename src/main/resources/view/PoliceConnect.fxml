@@ -6,68 +6,80 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="view.PoliceConnectController">
-   <left>
-      <VBox prefHeight="500.0" prefWidth="290.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Début" />
-                  <Label fx:id="attestationDebut" />
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Motif" />
-                  <Label fx:id="attestationMotif" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </left>
-   <right>
-      <VBox prefHeight="500.0" prefWidth="290.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Date de naissance" />
-                  <Label fx:id="date" />
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Lieu de naissance" />
-                  <Label fx:id="lieu" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </right>
-   <top>
-      <VBox alignment="TOP_CENTER" prefHeight="114.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Code à 4 chiffres" />
-                  <TextField fx:id="code" />
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Nom du controlé" />
-                  <TextField fx:id="username" />
-               </children>
-            </HBox>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#control" prefHeight="25.0" prefWidth="149.0" text="Ok" />
-         </children>
-      </VBox>
-   </top>
-   <bottom>
-      <VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="affichageErreur" prefHeight="31.0" prefWidth="28.0" />
-            <Button alignment="BASELINE_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#retour" text="Retour" />
-         </children>
-      </VBox>
-   </bottom>
+<BorderPane prefHeight="600.0" prefWidth="600.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+	fx:controller="view.PoliceConnectController">
+	<left>
+		<VBox prefHeight="500.0" prefWidth="290.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Début" />
+						<Label fx:id="attestationDebut" />
+					</children>
+				</HBox>
+				<HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Motif" />
+						<Label fx:id="attestationMotif" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</left>
+	<right>
+		<VBox prefHeight="500.0" prefWidth="290.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Date de naissance" />
+						<Label fx:id="date" />
+					</children>
+				</HBox>
+				<HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Lieu de naissance" />
+						<Label fx:id="lieu" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</right>
+	<top>
+		<VBox alignment="TOP_CENTER" prefHeight="114.0" prefWidth="600.0"
+			spacing="20.0" BorderPane.alignment="CENTER">
+			<children>
+				<HBox alignment="TOP_CENTER" prefHeight="100.0"
+					prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Code à 4 chiffres" />
+						<TextField fx:id="code" />
+					</children>
+				</HBox>
+				<HBox alignment="TOP_CENTER" prefHeight="100.0"
+					prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Nom du controlé" />
+						<TextField fx:id="username" />
+					</children>
+				</HBox>
+				<Button alignment="TOP_CENTER" contentDisplay="CENTER"
+					mnemonicParsing="false" onAction="#control" prefHeight="25.0"
+					prefWidth="149.0" text="Ok" />
+			</children>
+		</VBox>
+	</top>
+	<bottom>
+		<VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="600.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Label fx:id="affichageErreur" prefHeight="31.0"
+					prefWidth="28.0" />
+				<Button alignment="BASELINE_RIGHT" contentDisplay="RIGHT"
+					mnemonicParsing="false" onAction="#retour" text="Retour" />
+			</children>
+		</VBox>
+	</bottom>
 </BorderPane>

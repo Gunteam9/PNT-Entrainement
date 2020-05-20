@@ -5,49 +5,63 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.UserConnectController">
-   <left>
-      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="290.0" BorderPane.alignment="TOP_CENTER">
-         <children>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Date" />
-                  <DatePicker fx:id="date" />
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="à" />
-                  <TextField fx:id="heure" prefHeight="25.0" prefWidth="42.0" />
-                  <Label text="h" />
-                  <TextField fx:id="minute" prefHeight="25.0" prefWidth="49.0" />
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Motif" />
-                  <TextField fx:id="motif" />
-               </children>
-            </HBox>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#enregistrerAttestation" text="Enregistrer l'attestation" />
-         </children>
-      </VBox>
-   </left>
-   <right>
-      <TableView fx:id="listeTable" prefHeight="600.0" prefWidth="290.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn prefWidth="69.0" text="Code" />
-          <TableColumn prefWidth="96.0" text="Date" />
-            <TableColumn prefWidth="124.0" text="Motif" />
-        </columns>
-      </TableView>
-   </right>
-   <bottom>
-      <VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="affichageErreur" prefHeight="31.0" prefWidth="28.0" />
-            <Button alignment="BASELINE_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#retour" text="Retour" />
-         </children>
-      </VBox>
-   </bottom>
+<BorderPane prefHeight="600.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="view.UserConnectController">
+	<left>
+		<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="290.0"
+			BorderPane.alignment="TOP_CENTER">
+			<children>
+				<HBox alignment="TOP_CENTER" prefHeight="100.0"
+					prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Date" />
+						<DatePicker fx:id="date" />
+					</children>
+				</HBox>
+				<HBox alignment="TOP_CENTER" prefHeight="100.0"
+					prefWidth="200.0">
+					<children>
+						<Label text="à" />
+						<TextField fx:id="heure" prefHeight="25.0"
+							prefWidth="42.0" />
+						<Label text="h" />
+						<TextField fx:id="minute" prefHeight="25.0"
+							prefWidth="49.0" />
+					</children>
+				</HBox>
+				<HBox alignment="TOP_CENTER" prefHeight="100.0"
+					prefWidth="200.0" spacing="20.0">
+					<children>
+						<Label text="Motif" />
+						<TextField fx:id="motif" />
+					</children>
+				</HBox>
+				<Button alignment="CENTER" contentDisplay="CENTER"
+					mnemonicParsing="false" onAction="#enregistrerAttestation"
+					text="Enregistrer l'attestation" />
+			</children>
+		</VBox>
+	</left>
+	<right>
+		<TableView fx:id="listeTable" prefHeight="600.0"
+			prefWidth="290.0" BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn prefWidth="69.0" text="Code" />
+				<TableColumn prefWidth="96.0" text="Date" />
+				<TableColumn prefWidth="124.0" text="Motif" />
+			</columns>
+		</TableView>
+	</right>
+	<bottom>
+		<VBox alignment="TOP_CENTER" prefHeight="92.0" prefWidth="600.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Label fx:id="affichageErreur" prefHeight="31.0"
+					prefWidth="28.0" />
+				<Button alignment="BASELINE_RIGHT" contentDisplay="RIGHT"
+					mnemonicParsing="false" onAction="#retour" text="Retour" />
+			</children>
+		</VBox>
+	</bottom>
 </BorderPane>

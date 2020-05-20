@@ -7,66 +7,66 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AccueilController">
-   <top>
-      <HBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0" spacing="40.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0">
-               <children>
-                  <Label text="Connexion" />
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Label text="Username" />
-                        <TextField fx:id="connexionUsername" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Label text="Password" />
-                        <PasswordField fx:id="connexionPassword" />
-                     </children>
-                  </HBox>
-                  <Button fx:id="connexionSeConnecter" mnemonicParsing="false" onAction="#connexion" text="Se connecter" />
-               </children>
-            </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0">
-               <children>
-                  <Label text="Créer un compte" />
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Label text="Username" />
-                        <TextField fx:id="creationUsername" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Label text="Password" />
-                        <PasswordField fx:id="creationPassword" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Label text="Date de naissance" />
-                        <DatePicker fx:id="creationDate" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Label text="Lieu de naissance" />
-                        <TextField fx:id="creationLieu" />
-                     </children>
-                  </HBox>
-                  <Button fx:id="creationValider" mnemonicParsing="false" onAction="#creationCompte" text="Créer un compte" />
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </top>
-   <bottom>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="affichageErreur" />
-         </children>
-      </HBox>
-   </bottom>
+<BorderPane prefHeight="600.0" prefWidth="600.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AccueilController">
+	<top>
+		<HBox alignment="CENTER" prefHeight="600.0" prefWidth="600.0" spacing="40.0" BorderPane.alignment="CENTER">
+			<children>
+				<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0">
+					<children>
+						<Label text="Connexion" />
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Label text="Username" />
+								<TextField fx:id="connexionUsername" />
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Label text="Password" />
+								<PasswordField fx:id="connexionPassword" />
+							</children>
+						</HBox>
+						<Button fx:id="connexionSeConnecter" mnemonicParsing="false" onAction="#connexion" text="Se connecter" />
+					</children>
+				</VBox>
+				<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0">
+					<children>
+						<Label text="Créer un compte" />
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Label text="Username" />
+								<TextField fx:id="creationUsername" />
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Label text="Password" />
+								<PasswordField fx:id="creationPassword" />
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Label text="Date de naissance" />
+								<DatePicker fx:id="creationDate" />
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+							<children>
+								<Label text="Lieu de naissance" />
+								<TextField fx:id="creationLieu" />
+							</children>
+						</HBox>
+						<Button fx:id="creationValider" mnemonicParsing="false" onAction="#creationCompte" text="Créer un compte" />
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+	</top>
+	<bottom>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label fx:id="affichageErreur" />
+			</children>
+		</HBox>
+	</bottom>
 </BorderPane>
